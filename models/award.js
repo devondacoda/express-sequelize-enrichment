@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
-const User = require('./user');
 
 const Award = db.define('award', {
   name: {
@@ -9,5 +8,4 @@ const Award = db.define('award', {
   }
 });
 
-Award.belongsTo(User, {as: 'student'});
 module.exports = Award;
